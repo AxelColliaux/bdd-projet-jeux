@@ -1,4 +1,4 @@
-﻿namespace flechettes.Class;
+﻿namespace flechettesClass;
 
 using System;
 using System.Collections.Generic;

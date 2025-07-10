@@ -1,4 +1,4 @@
-﻿using flechettes.Class;
+﻿using flechettesClass;
 using TechTalk.SpecFlow.Assist;
 using FluentAssertions;
 
@@ -54,7 +54,7 @@ public class FlechettesStepDefinitions
     {
         // Conversion des données du tableau vers le type Class.DartThrow
         var tableData = table.CreateSet<DartThrowDto>();
-        var throws = tableData.Select(dto => new flechettes.Class.DartThrow
+        var throws = tableData.Select(dto => new flechettesClass.DartThrow
         {
             Zone = dto.Zone,
             Multiplicateur = dto.Multiplicateur
@@ -67,7 +67,7 @@ public class FlechettesStepDefinitions
     [When(@"""(.*)"" lance dans la zone (.*) avec multiplicateur (.*)")]
     public void WhenLanceDansLaZoneAvecMultiplicateur(string playerName, int zone, string multiplier)
     {
-        var dartThrow = new flechettes.Class.DartThrow
+        var dartThrow = new flechettesClass.DartThrow
         {
             Zone = zone,
             Multiplicateur = multiplier
@@ -81,7 +81,7 @@ public class FlechettesStepDefinitions
     {
         try
         {
-            var dartThrow = new flechettes.Class.DartThrow
+            var dartThrow = new flechettesClass.DartThrow
             {
                 Zone = int.Parse(invalidZone),
                 Multiplicateur = "Single"
@@ -99,7 +99,7 @@ public class FlechettesStepDefinitions
     {
         for (int i = 0; i < numberOfThrows; i++)
         {
-            var dartThrow = new flechettes.Class.DartThrow
+            var dartThrow = new flechettesClass.DartThrow
             {
                 Zone = 1,
                 Multiplicateur = "Single"
