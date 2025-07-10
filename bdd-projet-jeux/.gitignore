@@ -1,3 +1,4 @@
-./morpion/bin
-./morpion/obj
-.idea
+bin/
+obj/
+.idea/
+*.cache
